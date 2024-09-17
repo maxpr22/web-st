@@ -18,6 +18,10 @@ body{
     font-size: 14px;
     line-height: 1.71;
 }
+
+.visualy-hiden{
+    display: none;
+}
 /* header */
 .logo{
     color: var(--title-text-color);
