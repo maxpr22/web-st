@@ -10,6 +10,7 @@
  --contact-footer-text-color: #ffffff60;
  --portfolio-bg-color: #EEEEEE;
  --card-set-gap: 30px;
+ --footer-social-background-color: #ffffff10;
 
 }
 
@@ -190,13 +191,96 @@ ul {
   .location-phone:focus {
     color: var(--accent-color);
   }
+
+  .footer-style {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+  }
+  .footer-social {
+    margin-top: 12px;
+  }
+  .footer-social-text {
+    display: flex;
+    text-transform: uppercase;
+    color: var(--hero-footer-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .footer-social-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  .footer-social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    fill: var(--hero-footer-text-color);
+    background-color: var(--footer-social-background-color);
+    border-radius: 50%;
+  }
+
+.footer-social-item:hover,
+.footer-social-item:focus {
+  fill: var(--hero-footer-text-color);
+  background-color: var(--accent-color);
+}
+.icon-instagram{
+  background-image: url(../images/instagram-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-twitter{
+  background-image: url(../images/twitter-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-facebook{
+  background-image: url(../images/facebook-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-linkedin{
+  background-image: url(../images/linkedin-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
 /* main */
 /* hero */
 .hero-container{
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero.section{
+    height: 600px;
     background-color: var(--footer-bg-color);
+    padding: 200px 0px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/headerpic.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
 }
 
 .hero-title{
@@ -243,6 +327,34 @@ ul {
     justify-items: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.list-item::before{
+  display: block;
+  content: "";
+  margin-bottom: 30px;
+  height: 120px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--our-command-background-button-portfolio-color);
+}
+
+.icon-antena::before{
+  background-image: url(../images/icon-antena.svg);
+
+}
+
+.icon-clock::before{
+  background-image: url(../images/icon-clock.svg);
+}
+
+.icon-laptop::before{
+  background-image: url(../images/icon-laptop.svg);
+}
+
+.icon-cosmo::before{
+  background-image: url(../images/icon-cosmo.svg);
 }
 
 .benefits-list .title{
@@ -451,6 +563,22 @@ ul {
     color: var(--accent-color);
   }
 
+  /* Clients */
+
+  .clients{
+    padding: 94px;
+  }
+  .clients-title {
+    display: flex;
+    justify-content: center;
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
 
 
 
