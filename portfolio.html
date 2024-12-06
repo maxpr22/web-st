@@ -12,20 +12,20 @@
   </head>
   <body>
     <header class="header">
-      <div class="container header-container">
+      <div class="container header__container">
         <nav class="header-nav">
-          <a class="logo" href="./index.html"
-            ><span class="logo-accent">Web</span>Studio</a
-          >
+          <a class="logo" href="./portfolio.html"><span class="logo__accent">Web</span>Studio</a>
           <ul class="site-nav">
-            <li><a class="link" href="./index.html">Студія</a></li>
-            <li class="line"><a class="link-current" href="./portfolio.html">Портфоліо</a></li>
-            <li><a class="link" href="">Контакти</a></li>
+            <li>
+              <a class="site-nav__link" href="./index.html">Студія</a>
+            </li>
+            <li class="line"><a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфоліо</a></li>
+            <li><a class="site-nav__link" href="">Контакти</a></li>
           </ul>
         </nav>
         <ul class="contact-up">
           <li>
-            <a class="contact-up-link" href="mailto:info@devstudio.com">
+            <a class="contact-up__link" href="mailto:info@devstudio.com">
               <svg width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
@@ -33,7 +33,7 @@
             >
           </li>
           <li>
-            <a class="contact-up-link" href="tel:+380961111111">
+            <a class="contact-up__link" href="tel:+380961111111">
               <svg width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -46,90 +46,90 @@
     <main>
       <section class="example" >
         <div class="container">
-          <h1 class="example-title visualy-hiden">Наші роботи</h1>
-        <ul class="example-button">
-          <li><button type="button" class="button current">Усі</button></li>
-          <li><button type="button" class="button">Веб-сайти</button></li>
-          <li><button type="button" class="button">Додатки</button></li>
-          <li><button type="button" class="button">Дизайн</button></li>
-          <li><button type="button" class="button">Маркетинг</button></li>
+          <h1 class="example__title visualy-hiden">Наші роботи</h1>
+        <ul class="button-list">
+          <li><button type="button" class="button-list__button button-list__button--current">Усі</button></li>
+          <li><button type="button" class="button-list__button">Веб-сайти</button></li>
+          <li><button type="button" class="button-list__button">Додатки</button></li>
+          <li><button type="button" class="button-list__button">Дизайн</button></li>
+          <li><button type="button" class="button-list__button">Маркетинг</button></li>
         </ul>
         <ul class="card">
-            <li class="card-item">  
-              <a class="card-link" href="">
+            <li class="card__item">  
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                       приватну особу.
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project1.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project1.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title">Технокряк</h2>
-                  <p class="card-text">Веб-сайт</p>
+                  <h2 class="description-card__title">Технокряк</h2>
+                  <p class="description-card__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       Цей дизайн створений для яскравого відображення динаміки та напруги спортивного протистояння.
                       Привертає увагу, передаючи атмосферу драйву та емоцій.
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project2.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project2.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title">Постер <span>New Orlean vs Golden Star</span></h2>
-                  <p class="card-text">Дизайн</p>
+                  <h2 class="description-card__title">Постер <span>New Orlean vs Golden Star</span></h2>
+                  <p class="description-card__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       Додаток ресторану Seafood — це ваш персональний гід у світ свіжих морепродуктів.
                       Зручне меню, актуальні акції та швидке бронювання столиків в кілька кліків.
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project3.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project3.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="card-text">Додаток</p>
+                  <h2 class="description-card__title">Ресторан <span lang="en">Seafood</span></h2>
+                  <p class="description-card__text">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       <span lang="en">Prime</span> допомагає залучати клієнтів, підвищувати впізнаваність
                       бренду та досягати ваших бізнес-цілей швидше. 
                       Обирайте <span lang="en">Prime</span> — ваш шлях до успіху!
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project4.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project4.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title">Проєкт <span lang="en">Prime</span></h2>
-                  <p class="card-text">Маркетинг</p>
+                  <h2 class="description-card__title">Проєкт <span lang="en">Prime</span></h2>
+                  <p class="description-card__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       <span lang="en">Boxes</span> — зручний додаток для організації та 
                       впорядкування ваших речей. Створюйте віртуальні коробки,додавайте предмети, ведіть облік 
                       та знаходьте потрібне за лічені секунди
@@ -138,77 +138,77 @@
                   <img class="card-image" src="./images/project5.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title">Проєкт <span lang="en">Boxes</span></h2>
-                  <p class="card-text">Додаток</p>
+                  <h2 class="description-card__title">Проєкт <span lang="en">Boxes</span></h2>
+                  <p class="description-card__text">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       <span lang="en"> Inspiration has no Borders</span> — це онлайн-простір, де ідеї, 
                       креативність і культура об’єднуються без кордонів. Відкривайте для себе 
                       унікальні історії, та діліться власними проєктами. 
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project6.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project6.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title"><span lang="en"> Inspiration has no Borders</span></h2>
-                  <p class="card-text">Веб-сайт</p> 
+                  <h2 class="description-card__title"><span lang="en"> Inspiration has no Borders</span></h2>
+                  <p class="description-card__text">Веб-сайт</p> 
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       Вишуканий дизайн, преміальні матеріали та продумана композиція кожної сторінки
                       створюють відчуття ексклюзивності. Видання, яке станне справжньою окрасою вашої колекції.
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project7.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project7.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title">Видання <span lang="en">Limited Edition</span></h2>
-                  <p class="card-text">Дизайн</p>
+                  <h2 class="description-card__title">Видання <span lang="en">Limited Edition</span></h2>
+                  <p class="description-card__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       <span lang="en">LAB</span> — це творчий простір для тестування ідей та впровадження інновацій у маркетингу.
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project8.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project8.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title">Проєкт <span lang="en">LAB</span></h2>
-                  <p class="card-text">Маркетинг</p>
+                  <h2 class="description-card__title">Проєкт <span lang="en">LAB</span></h2>
+                  <p class="description-card__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="card-item">
-              <a class="card-link" href="">
+            <li class="card__item">
+              <a class="card__link" href="">
                 <div class="descr">
-                  <div class="descr-overlay">
-                    <p class="descr-text">
+                  <div class="descr__overlay">
+                    <p class="descr__text">
                       <span lang="en">Growing Business</span> — ваш цифровий помічник для розвитку бізнесу. 
                        Управління завданнями, аналіз фінансів, побудова стратегій 
                        і моніторинг результатів — усе в одному місці.
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project9.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
+                  <img class="card__image" src="./images/project9.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
                </div>
                 <div class="description-card">
-                  <h2 class="card-title"><span lang="en">Growing Business</span></h2>
-                  <p class="card-text">Додаток</p>
+                  <h2 class="description-card__title"><span lang="en">Growing Business</span></h2>
+                  <p class="description-card__text">Додаток</p>
                 </div>
               </a>
             </li>
@@ -217,61 +217,55 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container footer-style">
+      <div class="container footer__container">
         <div>
-          <a href="./index.html" class="footer-logo"
-            ><span class="logo-accent">Web</span>Studio</a
-          >
+          <a href="./index.html" class="footer__logo"><span class="logo__accent">Web</span>Studio</a>
           <address>
             <ul class="location">
-              <li class="location-list">
+              <li class="location__item">
                 <a
                   href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                  class="location-map"
+                  class="location__map"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="location-list">
-                <a href="mailto:info@devstudio.com" class="location-mail"
-                  >info@devstudio.com</a
-                >
+              <li class="location__item">
+                <a href="mailto:info@devstudio.com" class="location__mail">info@devstudio.com</a>
               </li>
-              <li class="location-list">
-                <a href="tel:+380961111111" class="location-phone"
-                  >+38 096 111 11 11</a
-                >
+              <li class="location__item">
+                <a href="tel:+380961111111" class="location__phone">+38 096 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
-        <div>
-          <p class="footer-social-text">Приєднуйтесь</p>
-          <ul class="footer-social-list">
+        <div class="footer-social">
+          <p class="footer-social__text">Приєднуйтесь</p>
+          <ul class="footer-social__list">
             <li>
-              <a class="footer-social-item" href="">
+              <a class="footer-social__item" href="">
                 <svg width="20px" height="20px">
                   <use href="./images/icons.svg#icon-instagram-footer"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="footer-social-item" href="">
+              <a class="footer-social__item" href="">
                 <svg width="20px" height="20px">
                   <use href="./images/icons.svg#icon-twitter-footer"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="footer-social-item" href="">
+              <a class="footer-social__item" href="">
                 <svg width="20px" height="20px">
                   <use href="./images/icons.svg#icon-facebook-footer"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="footer-social-item" href="">
+              <a class="footer-social__item" href="">
                 <svg width="20px" height="20px">
                   <use href="./images/icons.svg#icon-linkedin-footer"></use>
                 </svg>
@@ -280,14 +274,18 @@
           </ul>
         </div>
         <form class="footer-form">
-          <p class="footer-social-text">Підпишіться на розсилку</p>
-          <div class="footer-form-box">
-            <input type="email" class="footer-form-input" aria-label="email" placeholder="E-mail">
-            <button class="footer-form-button" type="submit">
+          <p class="footer-social__text">Підпишіться на розсилку</p>
+          <div class="footer-form__box">
+            <input
+              type="email"
+              class="footer-form__input"
+              aria-label="email"
+              placeholder="E-mail" />
+            <button class="footer-form__button" type="submit">
               Підписатися
-              <svg class="footer-form-img" width="24" height="24">
+              <svg class="footer-form__img" width="24" height="24">
                 <use href="./images/icons.svg#icon-icon-send"></use>
-              </svg> 
+              </svg>
             </button>
           </div>
         </form>
