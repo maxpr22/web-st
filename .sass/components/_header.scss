@@ -1,0 +1,25 @@
+.header {
+    border-bottom: 1px solid var(--header-color);
+    padding: 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-left: 0px;
+        padding-right: 0;
+      }
+
+    &__nav {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-between;
+        gap: 93px;
+      }  
+  }
+  
+
+  
+  
+  
+  

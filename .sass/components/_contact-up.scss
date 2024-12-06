@@ -1,0 +1,30 @@
+.contact-up {
+    display: flex;
+    align-items: center;
+    margin-left: 344px;
+    gap: 30px;
+
+        &__link {
+            display: flex;
+            align-items: center;
+            fill: var(--primary-text-color);
+            color: var(--primary-text-color);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            padding: 32px 0px;
+            gap: 10px;
+          
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          }
+  }
+  
+
+  .contact-up__link:hover,
+  .contact-up__link:focus .contact-up__link svg path:hover,
+  .contact-up__link svg path:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }

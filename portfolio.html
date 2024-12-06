@@ -7,16 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
     <header class="header">
       <div class="container header__container">
-        <nav class="header-nav">
+        <nav class="header__nav">
           <a class="logo" href="./portfolio.html"><span class="logo__accent">Web</span>Studio</a>
           <ul class="site-nav">
-            <li>
+            <li >
               <a class="site-nav__link" href="./index.html">Студія</a>
             </li>
             <li class="line"><a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфоліо</a></li>
@@ -44,15 +43,15 @@
       </div>
     </header>
     <main>
-      <section class="example" >
+      <section class="section" >
         <div class="container">
-          <h1 class="example__title visualy-hiden">Наші роботи</h1>
-        <ul class="button-list">
-          <li><button type="button" class="button-list__button button-list__button--current">Усі</button></li>
-          <li><button type="button" class="button-list__button">Веб-сайти</button></li>
-          <li><button type="button" class="button-list__button">Додатки</button></li>
-          <li><button type="button" class="button-list__button">Дизайн</button></li>
-          <li><button type="button" class="button-list__button">Маркетинг</button></li>
+          <h1 class="example__title visually-hidden">Наші роботи</h1>
+        <ul class="filter">
+          <li><button type="button" class="filter__button filter__button--current">Усі</button></li>
+          <li><button type="button" class="filter__button">Веб-сайти</button></li>
+          <li><button type="button" class="filter__button">Додатки</button></li>
+          <li><button type="button" class="filter__button">Дизайн</button></li>
+          <li><button type="button" class="filter__button">Маркетинг</button></li>
         </ul>
         <ul class="card">
             <li class="card__item">  
@@ -219,7 +218,7 @@
     <footer class="footer">
       <div class="container footer__container">
         <div>
-          <a href="./index.html" class="footer__logo"><span class="logo__accent">Web</span>Studio</a>
+          <a href="./index.html" class="logo--inverse"><span class="logo__accent">Web</span>Studio</a>
           <address>
             <ul class="location">
               <li class="location__item">

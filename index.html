@@ -9,15 +9,12 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400;500;700;900&display=swap"
       rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css " />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container header__container">
-        <nav class="header-nav">
+        <nav class="header__nav">
           <a class="logo" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
           <ul class="site-nav">
             <li class="line">
@@ -48,7 +45,7 @@
       </div>
     </header>
     <main>
-      <section class="hero-section">
+      <section class="hero">
         <div class="container hero__container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button data-modal-open type="button" class="hero__button">Замовити послугу</button>
@@ -56,7 +53,7 @@
       </section>
       <section class="section benefits">
         <div class="container">
-          <h2 class="benefits__title visualy-hiden">Наші переваги</h2>
+          <h2 class="benefits__title visually-hidden">Наші переваги</h2>
           <ul class="benefits-list">
             <li>
               <div class="benefits-list__picture">
@@ -404,7 +401,7 @@
     <footer class="footer">
       <div class="container footer__container">
         <div>
-          <a href="./index.html" class="footer__logo"><span class="logo__accent">Web</span>Studio</a>
+          <a href="./index.html" class="logo--inverse"><span class="logo__accent">Web</span>Studio</a>
           <address>
             <ul class="location">
               <li class="location__item">
