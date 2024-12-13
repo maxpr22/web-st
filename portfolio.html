@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="uk">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container header__container">
         <nav class="header__nav">
           <a class="logo" href="./portfolio.html"><span class="logo__accent">Web</span>Studio</a>
+          <button
+            class="menu-button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+            <svg height="16px" width="24px">
+              <use href="./images/icons.svg#icon-menu_24px"></use>
+            </svg>
+          </button>
           <ul class="site-nav">
-            <li >
+            <li>
               <a class="site-nav__link" href="./index.html">Студія</a>
             </li>
-            <li class="line"><a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфоліо</a></li>
+            <li class="line">
+              <a class="site-nav__link site-nav__link--current" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
             <li><a class="site-nav__link" href="">Контакти</a></li>
           </ul>
         </nav>
@@ -40,18 +52,62 @@
       </div>
     </header>
     <main>
-      <section class="section" >
+      <!-- mobile-menu -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg width="19px" height="19px">
+            <use href="./images/icons.svg#icon-close_24px"></use>
+          </svg>
+        </button>
+        <nav class="mobile-nav">
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a class="mobile-nav__link" href="">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="mobile-contact">
+          <ul class="mobile-contact__list">
+            <li class="mobile-contact__item">
+              <a class="mobile-contact__phone" href="tel:+380961111111"> +38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contact__item">
+              <a class="mobile-contact__mail" href="mailto:info@devstudio.com">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="mobile-social">
+          <li class="mobile-social__item">
+            <a class="mobile-social__link" href=""> Instagram</a>
+          </li>
+          <li class="mobile-social__item"><a class="mobile-social__link" href=""> Twitter</a></li>
+          <li class="mobile-social__item"><a class="mobile-social__link" href=""> Facebook</a></li>
+          <li class="mobile-social__item"><a class="mobile-social__link" href=""> Linkedin</a></li>
+        </ul>
+      </div>
+      <!-- filter of projects -->
+      <section class="section">
         <div class="container">
           <h1 class="example__title visually-hidden">Наші роботи</h1>
-        <ul class="filter">
-          <li><button type="button" class="filter__button filter__button--current">Усі</button></li>
-          <li><button type="button" class="filter__button">Веб-сайти</button></li>
-          <li><button type="button" class="filter__button">Додатки</button></li>
-          <li><button type="button" class="filter__button">Дизайн</button></li>
-          <li><button type="button" class="filter__button">Маркетинг</button></li>
-        </ul>
-        <ul class="card">
-            <li class="card__item">  
+          <ul class="filter">
+            <li>
+              <button type="button" class="filter__button filter__button--current">Усі</button>
+            </li>
+            <li><button type="button" class="filter__button">Веб-сайти</button></li>
+            <li><button type="button" class="filter__button">Додатки</button></li>
+            <li><button type="button" class="filter__button">Дизайн</button></li>
+            <li><button type="button" class="filter__button">Маркетинг</button></li>
+          </ul>
+          <ul class="card">
+            <li class="card__item">
               <a class="card__link" href="">
                 <div class="descr">
                   <div class="descr__overlay">
@@ -61,9 +117,27 @@
                       приватну особу.
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project1.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
-                <div class="description-card">
+                  <picture>
+                    <source
+                      srcset="./images/project1_480@x1.jpg 1x, ./images/project1_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project1_768@x1.jpg 1x, ./images/project1_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project1.jpg 1x, ./images/project1@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project1.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
+                <div class="description-card description-card--fixed">
                   <h2 class="description-card__title">Технокряк</h2>
                   <p class="description-card__text">Веб-сайт</p>
                 </div>
@@ -74,14 +148,35 @@
                 <div class="descr">
                   <div class="descr__overlay">
                     <p class="descr__text">
-                      Цей дизайн створений для яскравого відображення динаміки та напруги спортивного протистояння.
-                      Привертає увагу, передаючи атмосферу драйву та емоцій.
+                      Цей дизайн створений для яскравого відображення динаміки та напруги
+                      спортивного протистояння. Привертає увагу, передаючи атмосферу драйву та
+                      емоцій.
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project2.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project2_480@x1.jpg 1x, ./images/project2_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project2_768@x1.jpg 1x, ./images/project2_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project2.jpg 1x, ./images/project2@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project2.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
-                  <h2 class="description-card__title">Постер <span>New Orlean vs Golden Star</span></h2>
+                  <h2 class="description-card__title">
+                    Постер <span>New Orlean vs Golden Star</span>
+                  </h2>
                   <p class="description-card__text">Дизайн</p>
                 </div>
               </a>
@@ -91,12 +186,31 @@
                 <div class="descr">
                   <div class="descr__overlay">
                     <p class="descr__text">
-                      Додаток ресторану Seafood — це ваш персональний гід у світ свіжих морепродуктів.
-                      Зручне меню, актуальні акції та швидке бронювання столиків в кілька кліків.
+                      Додаток ресторану Seafood — це ваш персональний гід у світ свіжих
+                      морепродуктів. Зручне меню, актуальні акції та швидке бронювання столиків в
+                      кілька кліків.
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project3.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project3_480@x1.jpg 1x, ./images/project3_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project3_768@x1.jpg 1x, ./images/project3_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project3.jpg 1x, ./images/project3@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project3.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
                   <h2 class="description-card__title">Ресторан <span lang="en">Seafood</span></h2>
                   <p class="description-card__text">Додаток</p>
@@ -108,13 +222,31 @@
                 <div class="descr">
                   <div class="descr__overlay">
                     <p class="descr__text">
-                      <span lang="en">Prime</span> допомагає залучати клієнтів, підвищувати впізнаваність
-                      бренду та досягати ваших бізнес-цілей швидше. 
-                      Обирайте <span lang="en">Prime</span> — ваш шлях до успіху!
+                      <span lang="en">Prime</span> допомагає залучати клієнтів, підвищувати
+                      впізнаваність бренду та досягати ваших бізнес-цілей швидше. Обирайте
+                      <span lang="en">Prime</span> — ваш шлях до успіху!
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project4.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project4_480@x1.jpg 1x, ./images/project4_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project4_768@x1.jpg 1x, ./images/project4_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project4.jpg 1x, ./images/project4@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project4.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
                   <h2 class="description-card__title">Проєкт <span lang="en">Prime</span></h2>
                   <p class="description-card__text">Маркетинг</p>
@@ -126,13 +258,31 @@
                 <div class="descr">
                   <div class="descr__overlay">
                     <p class="descr__text">
-                      <span lang="en">Boxes</span> — зручний додаток для організації та 
-                      впорядкування ваших речей. Створюйте віртуальні коробки,додавайте предмети, ведіть облік 
-                      та знаходьте потрібне за лічені секунди
+                      <span lang="en">Boxes</span> — зручний додаток для організації та
+                      впорядкування ваших речей. Створюйте віртуальні коробки,додавайте предмети,
+                      ведіть облік та знаходьте потрібне за лічені секунди
                     </p>
                   </div>
-                  <img class="card-image" src="./images/project5.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project5_480@x1.jpg 1x, ./images/project5_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project5_768@x1.jpg 1x, ./images/project5_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project5.jpg 1x, ./images/project5@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project5.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
                   <h2 class="description-card__title">Проєкт <span lang="en">Boxes</span></h2>
                   <p class="description-card__text">Додаток</p>
@@ -144,16 +294,36 @@
                 <div class="descr">
                   <div class="descr__overlay">
                     <p class="descr__text">
-                      <span lang="en"> Inspiration has no Borders</span> — це онлайн-простір, де ідеї, 
-                      креативність і культура об’єднуються без кордонів. Відкривайте для себе 
-                      унікальні історії, та діліться власними проєктами. 
+                      <span lang="en"> Inspiration has no Borders</span> — це онлайн-простір, де
+                      ідеї, креативність і культура об’єднуються без кордонів. Відкривайте для себе
+                      унікальні історії, та діліться власними проєктами.
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project6.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project6_480@x1.jpg 1x, ./images/project6_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project6_768@x1.jpg 1x, ./images/project6_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project6.jpg 1x, ./images/project6@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project6.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
-                  <h2 class="description-card__title"><span lang="en"> Inspiration has no Borders</span></h2>
-                  <p class="description-card__text">Веб-сайт</p> 
+                  <h2 class="description-card__title">
+                    <span lang="en"> Inspiration has no Borders</span>
+                  </h2>
+                  <p class="description-card__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
@@ -163,13 +333,34 @@
                   <div class="descr__overlay">
                     <p class="descr__text">
                       Вишуканий дизайн, преміальні матеріали та продумана композиція кожної сторінки
-                      створюють відчуття ексклюзивності. Видання, яке станне справжньою окрасою вашої колекції.
+                      створюють відчуття ексклюзивності. Видання, яке станне справжньою окрасою
+                      вашої колекції.
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project7.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project7_480@x1.jpg 1x, ./images/project7_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project7_768@x1.jpg 1x, ./images/project7_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project7.jpg 1x, ./images/project7@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project7.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
-                  <h2 class="description-card__title">Видання <span lang="en">Limited Edition</span></h2>
+                  <h2 class="description-card__title">
+                    Видання <span lang="en">Limited Edition</span>
+                  </h2>
                   <p class="description-card__text">Дизайн</p>
                 </div>
               </a>
@@ -179,11 +370,30 @@
                 <div class="descr">
                   <div class="descr__overlay">
                     <p class="descr__text">
-                      <span lang="en">LAB</span> — це творчий простір для тестування ідей та впровадження інновацій у маркетингу.
+                      <span lang="en">LAB</span> — це творчий простір для тестування ідей та
+                      впровадження інновацій у маркетингу.
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project8.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project8_480@x1.jpg 1x, ./images/project8_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project8_768@x1.jpg 1x, ./images/project8_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project8.jpg 1x, ./images/project8@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project8.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
                   <h2 class="description-card__title">Проєкт <span lang="en">LAB</span></h2>
                   <p class="description-card__text">Маркетинг</p>
@@ -195,27 +405,47 @@
                 <div class="descr">
                   <div class="descr__overlay">
                     <p class="descr__text">
-                      <span lang="en">Growing Business</span> — ваш цифровий помічник для розвитку бізнесу. 
-                       Управління завданнями, аналіз фінансів, побудова стратегій 
-                       і моніторинг результатів — усе в одному місці.
+                      <span lang="en">Growing Business</span> — ваш цифровий помічник для розвитку
+                      бізнесу. Управління завданнями, аналіз фінансів, побудова стратегій і
+                      моніторинг результатів — усе в одному місці.
                     </p>
                   </div>
-                  <img class="card__image" src="./images/project9.jpg" alt="Зображення людей на екрані ноутбука" width="370px">
-               </div>
+                  <picture>
+                    <source
+                      srcset="./images/project9_480@x1.jpg 1x, ./images/project9_480@x2.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project9_768@x1.jpg 1x, ./images/project9_768@x2.jpg 2x"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg" />
+                    <source
+                      srcset="./images/project9.jpg 1x, ./images/project9@x2.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg" />
+                    <img
+                      class="card__image"
+                      src="./images/project9.jpg"
+                      alt="Зображення людей на екрані ноутбука"
+                      width="370px" />
+                  </picture>
+                </div>
                 <div class="description-card">
                   <h2 class="description-card__title"><span lang="en">Growing Business</span></h2>
                   <p class="description-card__text">Додаток</p>
                 </div>
               </a>
             </li>
-        </ul>
+          </ul>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div>
-          <a href="./index.html" class="logo--inverse"><span class="logo__accent">Web</span>Studio</a>
+        <div class="footer-address">
+          <a href="./index.html" class="logo--inverse"
+            ><span class="logo__accent">Web</span>Studio</a
+          >
           <address>
             <ul class="location">
               <li class="location__item">
@@ -287,5 +517,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

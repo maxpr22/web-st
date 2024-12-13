@@ -1,59 +1,124 @@
-.hero{
-    height: 600px;
-    background-color: var(--footer-bg-color);
-    padding: 200px 0px;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+.hero {
+  background-color: var(--footer-bg-color);
+  padding: 118px 0px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  @media screen and (max-width: 479px) {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/headerpic.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+      url(../../images/hero480@x1.jpg);
 
-    &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero480@x2.jpg);
+    }
 
-    &__title {
-        margin-top: 0;
-        margin-bottom: 30px;
-        color: var(--hero-footer-text-color);
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        text-align: center;
-        max-width: 696px;
-      }  
-
-    &__button {
-        color: var(--hero-footer-text-color);
-        background-color: var(--accent-color);
-        font-family: inherit;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.88;
-        letter-spacing: 0.06em;
-        border: transparent;
-        border-radius: 4px;
-        cursor: pointer;
-        padding: 10px 32px;
-        max-width: 218px;
-      
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
-        &:hover,
-        &:focus {
-          background-color: var(--hero-button-active);
-        }
-      }  
   }
 
-  
-  
-  
-  
+  @media screen and (min-width: $mobile) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero480@x1.jpg);
+    max-width: 480px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero480@x2.jpg);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero768@x1.jpg);
+    max-width: 768px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero768@x2.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero.jpg);
+    padding: 200px 0px;
+    max-width: 1600px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero@x2.jpg);
+  }
+
+  &__container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--hero-footer-text-color);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 479px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1199px) {
+      font-size: 26px;
+      line-height: 1.62;
+      letter-spacing: 0.06em;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+      letter-spacing: 0.06em;
+      width: 696px;
+    }
+  }
+
+  &__button {
+    color: var(--hero-footer-text-color);
+    background-color: var(--accent-color);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    border: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 32px;
+    max-width: 218px;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: var(--hero-button-active);
+    }
+  }
+}

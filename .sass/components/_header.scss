@@ -3,18 +3,46 @@
     padding: 0;
 
     &__container {
+      
+
+      @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
-        padding-left: 0px;
-        padding-right: 0;
+        justify-content: center;
+        gap: 87px;
       }
 
-    &__nav {
+      @media screen and (min-width: $desktop) {
         display: flex;
-        flex-grow: 1;
         align-items: center;
-        justify-content: space-between;
-        gap: 93px;
+        gap: 300px;
+      }
+    }
+
+    &__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+            @media screen and (min-width: $mobile) {
+              gap: 276px;
+            }
+          
+            @media screen and (min-width: $tablet) {
+              display: flex;
+              flex-grow: 1;
+              align-items: center;
+              justify-content: space-between;
+              gap: 92px;
+            }
+          
+            @media screen and (min-width: $desktop) {
+              display: flex;
+              flex-grow: 1;
+              align-items: center;
+              justify-content: space-between;
+              gap: 92px;
+            }
       }  
   }
   
